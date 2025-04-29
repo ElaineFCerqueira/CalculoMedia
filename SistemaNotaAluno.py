@@ -18,7 +18,7 @@ def media():
         situacao = 'foi Reprovado(a) \n🥺'
     
     resultado.configure(
-        text = f'Olá {n}, \nMédia: {media:.1f} \nVocê {situacao} '
+        text = f'Olá {n}, \nSua média: {media:.1f} \nVocê {situacao} '
     )
 #-----------------------------------------------------------------------------------
 
@@ -31,25 +31,25 @@ def limpar(): #apaga as variavéis
     resultado.configure(text='')
 #-----------------------------------------------------------------------------------
 
-ctk.set_appearance_mode('system') #muda a cor da janela "system = cor do sistema do usuário" # Pode ser "light" ou "dark"
+ctk.set_appearance_mode('dark') #muda a cor da janela "system = cor do sistema do usuário" # Pode ser "light" ou "dark"
 #=============================== Janela Principal =================================
 janela = ctk.CTk() #criação da janela
 janela.geometry('600x650') #determina o tamanho larguraxaltura
 janela.resizable(False,False) #trava o tamanho da janela
 janela.title('Notas') #altera o nome da janela
-janela.iconbitmap('foto00.ico') #altera o icone da janela (site: icon icons)
+janela.iconbitmap('CalculoMedia/foto00.ico') #altera o icone da janela (site: icon icons)
 #==================================================================================
 
-# ============================ Incluir imagem de fundo ===================================
-# Carregar a imagem
-imagem = Image.open('planofundo.jpeg')      # Nome da imagem que está na pasta
-imagem = imagem.resize((500, 600))    # Redimensiona pra caber certinho
-imagem_tk = ImageTk.PhotoImage(imagem)
+# # ============================ Incluir imagem de fundo ===================================
+# # Carregar a imagem
+# imagem = Image.open('CalculoMedia/planofundo.jpeg')      # Nome da imagem que está na pasta
+# imagem = imagem.resize((600, 600))    # Redimensiona pra caber certinho
+# imagem_tk = ImageTk.PhotoImage(imagem)
 
-# Colocar a imagem num rótulo (label) que cobre toda a janela
-fundo = ctk.CTkLabel(janela, image=imagem_tk, text="")  # text="" é pra não aparecer texto
-fundo.place(x=0, y=0, relwidth=1, relheight=1)  # relwidth=1 e relheight=1 faz preencher tudo
-#==================================================================================
+# # Colocar a imagem num rótulo (label) que cobre toda a janela
+# fundo = ctk.CTkLabel(janela, image=imagem_tk, text="")  # text="" é pra não aparecer texto
+# fundo.place(x=0, y=0, relwidth=1, relheight=1)  # relwidth=1 e relheight=1 faz preencher tudo
+# #==================================================================================
 
 
 
@@ -174,7 +174,7 @@ botao_limpar.place(x=300,y=360) #inicializa o componente com variavel
 #criar primeiro titulo da janela(não precisa de variavel)
 resultado= ctk.CTkLabel(janela,
              text='',
-             text_color='black', #escolher cor através do color picker
+             text_color='#FFFFFF', #escolher cor através do color picker
              #fg_color='#F5F5DC', #cor de fundo da caixa  
              font=('Calibri',20, )) # tipo da letra tamanho, bold= deixar a letra mais intensa(negrito)
 resultado.place(x=190,y=460) #inicializa o componente com variavel 
