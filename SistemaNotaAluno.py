@@ -1,3 +1,4 @@
+from PIL import Image, ImageTk
 import customtkinter as ctk
 
 #--------------------------- Função Calcular média ----------------------------------
@@ -39,6 +40,16 @@ janela.title('Notas') #altera o nome da janela
 janela.iconbitmap('foto00.ico') #altera o icone da janela (site: icon icons)
 #==================================================================================
 
+# ============================ Incluir imagem de fundo ===================================
+# Carregar a imagem
+imagem = Image.open("foto.jpg")      # Nome da imagem que está na pasta
+imagem = imagem.resize((500, 600))    # Redimensiona pra caber certinho
+imagem_tk = ImageTk.PhotoImage(imagem)
+
+# Colocar a imagem num rótulo (label) que cobre toda a janela
+fundo = ctk.CTkLabel(janela, image=imagem_tk, text="")  # text="" é pra não aparecer texto
+fundo.place(x=0, y=0, relwidth=1, relheight=1)  # relwidth=1 e relheight=1 faz preencher tudo
+#==================================================================================
 
 
 
