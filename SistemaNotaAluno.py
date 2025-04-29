@@ -42,7 +42,7 @@ janela.iconbitmap('foto00.ico') #altera o icone da janela (site: icon icons)
 
 # ============================ Incluir imagem de fundo ===================================
 # Carregar a imagem
-imagem = Image.open("foto.jpg")      # Nome da imagem que está na pasta
+imagem = Image.open('planofundo.jpeg')      # Nome da imagem que está na pasta
 imagem = imagem.resize((500, 600))    # Redimensiona pra caber certinho
 imagem_tk = ImageTk.PhotoImage(imagem)
 
