@@ -1,25 +1,30 @@
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 import customtkinter as ctk
 
 #--------------------------- Função Calcular média ----------------------------------
 def media():
-    n = nome.get() #get é o comando que puxa o que tem na caixa - vem como texto(input)
-    n1 = float(unidade01.get().replace(',','.'))#replace (subistituir ',' por '.')
-    n2 = float(unidade01.get().replace(',','.'))#replace (subistituir ',' por '.')
-    n3 = float(unidade01.get().replace(',','.'))#replace (subistituir ',' por '.')
+    try: #não aceita que seja digitado letra na parte de numeros
+        n = nome.get() #get é o comando que puxa o que tem na caixa - vem como texto(input)
+        n1 = float(unidade01.get().replace(',','.'))#replace (subistituir ',' por '.')
+        n2 = float(unidade02.get().replace(',','.'))#replace (subistituir ',' por '.')
+        n3 = float(unidade03.get().replace(',','.'))#replace (subistituir ',' por '.')
 
-    media = (n1+n2+n3)/3
+        media = (n1+n2+n3)/3
 
-    if (media >= 7):
-        situacao = 'foi Aprovado(a)\n Parabéns!🥳'
-    elif (media >= 5 and media < 7):
-        situacao = "está na Recuperação \n😟"
-    else:
-        situacao = 'foi Reprovado(a) \n🥺'
-    
-    resultado.configure(
-        text = f'Olá {n}, \nSua média: {media:.1f} \nVocê {situacao} '
-    )
+        if (media >= 7):
+            situacao = 'foi Aprovado(a)\n Parabéns!🥳'
+        elif (media >= 5 and media < 7):
+            situacao = "está na Recuperação \n😟"
+        else:
+            situacao = 'foi Reprovado(a) \n🥺'
+        
+        resultado.configure(
+            text = f'Olá {n}, \nSua média: {media:.1f} \nVocê {situacao} '
+                            )
+    except ValueError:
+        resultado.configure(
+            text='⚠️ Por favor!\nDigite apenas números válidos'
+        )
 #-----------------------------------------------------------------------------------
 
 #--------------------------- Função Limpar Campos  ---------------------------------
@@ -37,7 +42,7 @@ janela = ctk.CTk() #criação da janela
 janela.geometry('600x650') #determina o tamanho larguraxaltura
 janela.resizable(False,False) #trava o tamanho da janela
 janela.title('Notas') #altera o nome da janela
-janela.iconbitmap('CalculoMedia/foto00.ico') #altera o icone da janela (site: icon icons)
+#janela.iconbitmap('CalculoMedia/foto00.ico') #altera o icone da janela (site: icon icons)
 #==================================================================================
 
 # # ============================ Incluir imagem de fundo ===================================
