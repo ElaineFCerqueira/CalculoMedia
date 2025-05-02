@@ -5,7 +5,8 @@
 ✨ Basta inserir suas notas das unidades e, num piscar de olhos, sua média cósmica será revelada! 👽
 
 #🌠 Funcionalidades 🌠 Inserção de Notas: Digite suas notas da 1️⃣ Unidade , 2️⃣ Unidade e 3️⃣ Unidade em campos amigáveis como buracos negros de informação! ⚫️ 
-Cálculo de Média: Assim que as três notas entrarem em órbita, o sistema calculará sua média com a rapidez de um raio gama! ⚡️ Exibição da Média: Sua média final brilhará na tela como uma supernova de aprovação! 🌟
+Cálculo de Média: Assim que as três notas entrarem em órbita, o sistema calculará sua média com a rapidez de um raio gama! 
+⚡️Exibição da Média: Sua média final brilhará na tela como uma supernova de aprovação! 🌟
 
 #📂 Arquivos Cósmicos 📂 
 Dentro desta nebulosa de arquivos, você encontrará: calcula_media.py: O coração pulsante em Python, onde a magia dos cálculos acontece! ✨ calcula_media: Arquivo executável, pronto para ser lançado em sua máquina espacial! 🚀 (A forma pode variar dependendo do seu sistema operacional e da nave de empacotamento utilizada).
